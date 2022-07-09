@@ -252,10 +252,10 @@ section {
     /* object-fit: cover; */
 }
 
-.menu .content .box .imgBx img:hover{
+/* .menu .content .box .imgBx img:hover{
     transition: 0.5s;
     transform: scale(1.2);
-}
+} */
 
 .menu .content .box .text {
     padding: 15px 0 5px;
