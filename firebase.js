@@ -41,29 +41,6 @@ function writeUserData(e) {
   var email = getSubmittedValues('emailID');
   var msg = getSubmittedValues('msgID');
 
-  var body = 'Name : ' + name + '<br>Email : ' + email + '<br>Message : ' + msg ;
-
-  // ------------------- SMTP Mail Sending ----------------------
-
-  // Email.send({
-  //   Host: "smtp.gmail.com",
-  //   Username: "vivekkalal.nextech@gmail.com",
-  //   Password: "VivekNextech",
-  //   To: 'vivekkalal20@gmail.com',
-  //   From: "vivekkalal.nextech@gmail.com",
-  //   Subject: "Message From Contact Form from" + name,
-  //   Body: body
-
-  // }).then(
-  //   message => {
-  //     if(message == 'OK'){
-  //       alert('Your Mail Has been Sent Thank you for contacting us')
-  //     }else{
-  //       alert('There is an error sending msg')
-  //     }
-  //   }
-  // );
-  
   // ============================================================
 
 

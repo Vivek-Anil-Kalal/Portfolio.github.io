@@ -176,7 +176,7 @@
             <h2 class="titleText"><span>C</span>ontact Me</h2>
             <p>Contact Me For Any Query / Help / Collaborate</p>
         </div>
-        <form class="contactForm" id="contactForm" action="javascript:writeUserData()">
+        <form class="contactForm" id="contactForm" action="javascript:writeUserData()" method="post">
             <h3>Send Message</h3>
             <div class="inputBox">
                 <input type="text" name="" placeholder="Name" id="nameID" required>
@@ -216,8 +216,9 @@
 
     <script src="firebase.js" type="module"></script>
 
-    <!-- SMTP CDN -->
+    <!-- SMTP CDN for mails-->
     <script src="https://smtpjs.com/v3/smtp.js"></script>
+
     <!-- JQuery CDN -->
     <!-- <script src="jquery-3.6.0.min.js"></script> -->
 </body>
