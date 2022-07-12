@@ -319,9 +319,11 @@ section {
     background-size: cover;
 }
 
+
 .white .titleText,
 .white p {   
-    color: #fff;
+    color: #111;
+    font-weight: 700;
 }
 
 .testimonials .content {
@@ -336,7 +338,8 @@ section {
     width: 340px;
     margin: 20px;
     padding: 40px;
-    background: #fff;
+    background: linear-gradient(rgba(255, 255, 255, 0.5) , rgba(255,255,255,0.5));
+    border-radius: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -366,7 +369,7 @@ section {
 }
 
 .testimonials .content .box .text p {
-    color: #666;
+    color: black;
     font-style: italic;
     font-weight: 600;
 }
@@ -564,6 +567,13 @@ section {
         padding: 35px 40px;
         margin-top: 20px;
         margin-bottom: 30px;
+    }
+
+
+    /* Testimonials */
+    .testimonials{
+        background-size: 800px;
+        /* background-repeat: no-repeat; */
     }
 }
 
