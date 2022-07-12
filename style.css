@@ -383,8 +383,13 @@ section {
 }
 
 .contact {
-    background: url(MyAssets/Contact/bg3.jpg);
+    background: url(MyAssets/Contact/pexels-miguel-á-padriñán-1591062.jpg);
     background-size: cover;
+}
+
+.contact .title .titleText , .contact .title p{
+    color: white;
+    font-weight: 700;
 }
 
 .contactForm {
