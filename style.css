@@ -383,7 +383,7 @@ section {
 }
 
 .contact {
-    background: url(MyAssets/Contact/pexels-miguel-á-padriñán-1591062.jpg);
+    background: url(MyAssets/Contact/Mail.webp);
     background-size: cover;
 }
 
@@ -494,7 +494,7 @@ section {
         position: relative;
         width: 40px;
         height: 40px;
-        background: url(MyAssets/menu.png);
+        background: url(MyAssets/menu.webp);
         background-size: 30px;
         background-repeat: no-repeat;
         background-position: center;
@@ -503,7 +503,7 @@ section {
 
     /* No space */
     .menuToggle.active {
-        background: url(MyAssets/close.png);
+        background: url(MyAssets/close.webp);
         background-size: 25px;
         background-repeat: no-repeat;
         background-position: center;
