@@ -315,6 +315,7 @@ section {
 /* ********************************** */
 
 .testimonials {
+    position: relative;
     background: url(MyAssets/Testimonials/Star-Rating.webp);
     background-size: cover;
 }
@@ -380,6 +381,29 @@ section {
     font-size: 1.5em;
     color: #ff0157;
     font-weight: 600;
+}
+
+.float-btn{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.quill{
+    background: #ff0157;
+    border-radius: 50%;
+    padding: 10px;
+    width: 70px;
+    bottom: 50px;
+    right: 80px;
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.quill:hover{
+    background-color: #ff76a4;
+    /* box-shadow: 3px 3px 15px black; */
 }
 
 .contact {
@@ -578,7 +602,12 @@ section {
     /* Testimonials */
     .testimonials{
         background-size: 800px;
+        padding-bottom: 50px;
         /* background-repeat: no-repeat; */
+    }
+
+    .quill{
+        bottom: 10px;
     }
 }
 
