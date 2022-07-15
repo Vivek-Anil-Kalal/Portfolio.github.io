@@ -40,7 +40,7 @@ p {
 .banner .content h2 {
     font-size: 4.6em;
     color: #ff0157;
-    background: linear-gradient(rgb(29, 27, 27 , 0.2), rgb(147, 138, 138 , 0.2) );
+    background: linear-gradient(rgb(29, 27, 27, 0.2), rgb(147, 138, 138, 0.2));
     margin-bottom: 100px;
     border-radius: 35px;
 }
@@ -135,9 +135,10 @@ section {
     padding: 50px;
 }
 
-.bold{
+.bold {
     font-weight: 700;
 }
+
 .row {
     position: relative;
     width: 100%;
@@ -150,7 +151,7 @@ section {
     width: 48%;
 }
 
-.col50 .imgBx img{
+.col50 .imgBx img {
     border-radius: 0 50px 0 50px;
 }
 
@@ -166,12 +167,12 @@ section {
     font-size: 1.5em;
 }
 
-.about .row p{
+.about .row p {
     font-weight: 500;
     font-size: 1.3em;
 }
 
-.resume{
+.resume {
     background-color: transparent;
     border: 2px solid #ff0157;
     border-radius: 10px;
@@ -183,18 +184,19 @@ section {
     transition: 0.5s;
 }
 
-.resume:hover{
+.resume:hover {
     color: white;
     border-color: white;
     background-color: #ff0157;
     box-shadow: 2px 2px 10px #ff0157;
 }
-.contact-link{
+
+.contact-link {
     text-decoration: none;
     color: #ff0157;
 }
 
-.contact-link:hover{
+.contact-link:hover {
     color: blue;
     text-decoration: underline;
 }
@@ -223,7 +225,7 @@ section {
     flex-direction: column;
 }
 
-.title p{
+.title p {
     font-size: 1.5em;
 }
 
@@ -318,11 +320,12 @@ section {
     position: relative;
     background: url(MyAssets/Testimonials/Star-Rating.webp);
     background-size: cover;
+    height: 100vh;
 }
 
 
 .white .titleText,
-.white p {   
+.white p {
     color: #111;
     font-weight: 700;
 }
@@ -347,7 +350,7 @@ section {
     padding-bottom: 50px;
 }
 
-.swiper-wrapper .swiper-slide{
+.swiper-wrapper .swiper-slide {
     background-position: center;
     background-size: cover;
     flex-shrink: 0;
@@ -357,15 +360,16 @@ section {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
-.swiper-wrapper .swiper-slide-active{
+.swiper-wrapper .swiper-slide-active {
     filter: blur(0px);
 }
 
-.swiper-slide .testimonialBox .details .imgBx img{
+.swiper-slide .testimonialBox .details .imgBx img {
     width: 200px;
     object-fit: cover;
 }
-.testimonialBox{
+
+.testimonialBox {
     background-color: white;
     border-radius: 10px;
     text-align: center;
@@ -374,7 +378,7 @@ section {
     padding: 50px;
 }
 
-.testimonialBox .quote{
+.testimonialBox .quote {
     width: 50px;
     position: absolute;
     top: 10px;
@@ -388,7 +392,7 @@ section {
     margin-top: 20px;
 }
 
-.testimonialBox .details .imgBx{
+.testimonialBox .details .imgBx {
     position: relative;
     width: 70px;
     height: 70px;
@@ -397,7 +401,7 @@ section {
     margin-right: 10px;
 }
 
-.testimonialBox .details .imgBx img{
+.testimonialBox .details .imgBx img {
     position: absolute;
     top: 0;
     left: 0;
@@ -406,7 +410,7 @@ section {
     object-fit: cover;
 }
 
-.testimonialBox .details h3{
+.testimonialBox .details h3 {
     font-size: 1.2em;
     font-weight: 600;
     letter-spacing: 1px;
@@ -414,19 +418,19 @@ section {
     line-height: 1.1em;
 }
 
-.testimonialBox .details h3 span{
+.testimonialBox .details h3 span {
     font-size: 12px;
     color: #666;
 }
 
 
-.float-btn{
+.float-btn {
     display: flex;
     align-items: center;
     justify-content: end;
 }
 
-.quill{
+.quill {
     background: #ff0157;
     border-radius: 50%;
     padding: 10px;
@@ -438,7 +442,7 @@ section {
     transition: all 0.5s;
 }
 
-.quill:hover{
+.quill:hover {
     background-color: #ff76a4;
     /* box-shadow: 3px 3px 15px black; */
 }
@@ -448,7 +452,8 @@ section {
     background-size: cover;
 }
 
-.contact .title .titleText , .contact .title p{
+.contact .title .titleText,
+.contact .title p {
     color: white;
     font-weight: 700;
 }
@@ -511,6 +516,11 @@ section {
     color: #333;
 }
 
+@media (max-width: 1400px) {
+    .testimonials{
+        height: 110vh;
+    }
+}
 
 @media (max-width: 991px) {
 
@@ -574,7 +584,7 @@ section {
         filter: invert(1);
     }
 
-/* About  */
+    /* About  */
 
 
     section {
@@ -624,10 +634,6 @@ section {
         font-weight: 300;
     }
 
-    .testimonials .content .box {
-        margin: 10px;
-        padding: 20px;
-    }
 
     .contactForm {
         padding: 35px 40px;
@@ -637,13 +643,13 @@ section {
 
 
     /* Testimonials */
-    .testimonials{
+    .testimonials {
+        padding: 0;
         background-size: 800px;
         padding-bottom: 50px;
-        /* background-repeat: no-repeat; */
     }
 
-    .quill{
+    .quill {
         bottom: 10px;
     }
 }
@@ -652,5 +658,18 @@ section {
     .banner .content h2 {
         font-size: 2.2em;
         color: #fff;
+    }
+
+    .testimonials{
+        padding: 0;
+        height: 130vh;
+    }
+    .testi_section {
+        padding: 20px;
+        width: 350px;
+    }
+
+    .swiper-wrapper .swiper-slide{
+        width: 80%;
     }
 }
