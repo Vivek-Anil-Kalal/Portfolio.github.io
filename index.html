@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="style.css">
     <title>Vivek's Portfolio</title>
 
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
     <!-- ICON -->
     <link rel="icon" href="MyAssets/logo.webp" type="image/x-icon">
 
@@ -237,6 +240,27 @@
     <div class="copyrightText">
         <p class="bold">Copyright 2020 Vivek Kalal. All Rights are reserved </p>
     </div>
+
+    <!-- Swiper JS CDN -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 45,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            loop: true,
+        });
+    </script>
 
     <!-- Normal JS  -->
     <script type="text/javascript">
