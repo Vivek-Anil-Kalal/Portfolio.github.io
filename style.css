@@ -375,12 +375,18 @@ section {
     padding: 30px;
 }
 
+.testimonialBox .content p{
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
 .testimonialBox .quote {
     width: 50px;
     position: absolute;
     top: 10px;
     right: 30px;
-    opacity: 0.2;
+    opacity: 0.4;
 }
 
 .testimonialBox .details {
