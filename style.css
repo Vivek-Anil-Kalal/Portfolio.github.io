@@ -461,13 +461,20 @@ section {
     font-weight: 700;
 }
 
-.contactForm {
+.formContainer {
     padding: 75px 50px;
     background: #fff;
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
     max-width: 500px;
     margin-top: 50px;
 }
+/* .contactForm {
+    padding: 75px 50px;
+    background: #fff;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin-top: 50px;
+} */
 
 .contactForm h3 {
     color: #111;
@@ -508,6 +515,33 @@ section {
     border: none;
     cursor: pointer;
 }
+
+
+/* ************************************* */
+/* ********** Toggled List ************* */
+/* ************************************* */
+
+.msgSent h3{
+    text-align: center;
+    color: rgb(54, 217, 54);
+    font-weight: 600;
+    font-size: 2em;
+}
+
+.msgSent{
+    text-align: center;
+    transition: 0.8s;
+}
+.msgSent img{
+    border-radius: 20px;
+    width: 200px;
+}
+
+.fadeAway{
+    transition: 0.5s;
+    opacity: 0;
+}
+/* ************************************* */
 
 .copyrightText {
     padding: 8px 40px;

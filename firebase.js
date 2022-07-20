@@ -24,12 +24,8 @@ const analytics = getAnalytics(app);
 import { getDatabase, ref, set, child, update, remove }
   from 'https://www.gstatic.com/firebasejs/9.8.4/firebase-database.js'
 
-// var name = document.getElementById('nameID').addEventListener
-
 const sendBtn = document.getElementById('contactForm');
 sendBtn.addEventListener('submit', writeUserData);
-
-// const database = getDatabase();
 
 function writeUserData(e) {
 
@@ -52,11 +48,17 @@ function writeUserData(e) {
     Message: msg,
   });
 
-  alert('Message Sent Succesfully !!! \n Thank you for Contacting Us \n will soon get in touch with you')
+  const contactForm = document.getElementById('contactForm');
+  contactForm.classList.toggle('fadeAway');
+  contactForm.parentNode.removeChild(contactForm);
+  console.log(contactForm.parentNode);                        
 
-  document.getElementById('nameID').value = "";
-  document.getElementById('emailID').value = "";
-  document.getElementById('msgID').value = "";
+  const msgSentDiv = document.createElement('div')
+  msgSentDiv.innerHTML = `<div class="msgSent">
+                            <h3>Message Sent Successfully</h3>
+                            <img src="MyAssets/Contact/sent.gif" alt="Message Sent">
+                          </div>`
+  document.getElementById('formContainer').appendChild(msgSentDiv)
 }
 
 function getSubmittedValues(id) {
