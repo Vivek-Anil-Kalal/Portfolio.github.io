@@ -460,7 +460,7 @@ section {
 
 .model{
     position: fixed;
-    top: 50%;
+    top: 54%;
     left: 50%;
     transform: translate(-50% , -50%) scale(0);
     transition: 200ms ease-in-out;
@@ -481,7 +481,7 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid black;
     font-size: 1.25em;
     font-weight: 700;
 }
@@ -498,6 +498,42 @@ section {
 
 .model-body{
     padding: 10px 15px;
+    background-color: rgb(255, 255, 255);
+}
+
+.model-body .input{
+    padding: 10px 15px;
+}
+
+.model-body .input input[type=text ] , textarea{
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 1.1em;
+    font-weight: 600;
+    outline: none;
+    border-radius: 8px;
+    /* resize: none; */
+}
+
+.submitInput{
+    text-align: center;
+}
+
+#submit{
+    cursor: pointer;
+    width: 100px;
+    border-radius: 5px;
+    padding: 10px 15px;
+    background-color: rgb(56, 231, 56);
+    outline: none;
+    border: 1px solid green;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+#submit:hover{
+    box-shadow: 2px 3px 10px green;
 }
 
 #overlay{
