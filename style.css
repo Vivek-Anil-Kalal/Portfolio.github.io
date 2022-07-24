@@ -375,6 +375,10 @@ section {
     padding: 30px;
 }
 
+.swiper .swiper-slide .testimonialBox.active{
+    background-color: rgb(0, 0, 0);
+}
+
 .testimonialBox .content p{
     letter-spacing: 1px;
     font-weight: 700;
@@ -450,6 +454,71 @@ section {
     /* box-shadow: 3px 3px 15px black; */
 }
 
+/* ******************************************* */
+/* *******      Review Popup        ********** */
+/* ******************************************* */
+
+.model{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 100;
+    background-color: white;
+    width: 500px;
+    min-width: 60%;
+}
+/* Remember to add the class in html */
+.model.active{
+    transform: translate(-50% , -50%) scale(1);
+}
+
+.model-header{
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    font-size: 1.25em;
+    font-weight: 700;
+}
+
+.close-button{
+    padding: 2px 5px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.model-body{
+    padding: 10px 15px;
+}
+
+#overlay{
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* To enable background clicking when it is active  */
+    pointer-events: none;
+    z-index: 10;
+}
+
+#overlay.active{
+    opacity: 1;
+    pointer-events: all;
+}
+
 .contact {
     background: url(MyAssets/Contact/Mail.webp);
     background-size: cover;
@@ -503,7 +572,7 @@ section {
 
 .contactForm .inputBox input[type="submit"] {
     font-size: 1em;
-    color: #fff;
+    color: rgb(215, 215, 215);
     background: #ff0157;
     display: inline-block;
     text-transform: uppercase;

@@ -209,9 +209,26 @@
 
         </section>
 
-        <div class="float-btn">
+        <button data-model-target="#model" class="float-btn">
             <img src="MyAssets/Testimonials/quill.png" alt="Quil" class="quill">
+        </button>
+
+        <!-- Overlay Review Section -->
+
+        <div class="model" id="model">
+            <div class="model-header">
+                <div class="title">Write A Review</div>
+                <button data-close-button class="close-button">&times;</button>
+            </div>
+            <div class="model-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro cum sint sapiente suscipit earum,
+                repellendus itaque enim repudiandae nihil aspernatur obcaecati unde saepe qui molestiae quibusdam ab
+                debitis recusandae possimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat dolor,
+                quis quas, eius voluptate animi consequuntur vitae exercitationem a harum nisi ut quam facere expedita
+                labore dolorum, facilis eos similique!
+            </div>
         </div>
+        <div id="overlay"></div>
 
     </section>
 
@@ -281,23 +298,66 @@
 
         // To avoid open Debugger tool 
 
-        document.onkeydown = function (e) {
-            if (event.keyCode == 123) {
-                return false;
-            }
-            if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-                return false;
-            }
-            if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
-                return false;
-            }
-            if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-                return false;
-            }
-            if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-                return false;
-            }
+        // document.onkeydown = function (e) {
+        //     if (event.keyCode == 123) {
+        //         return false;
+        //     }
+        //     if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+        //         return false;
+        //     }
+        //     if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+        //         return false;
+        //     }
+        //     if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+        //         return false;
+        //     }
+        //     if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+        //         return false;
+        //     }
+        // }
+
+
+        // Review Popup JS
+
+        const testimonialBox = document.querySelectorAll('.testimonialBox')
+        const openModelButton = document.querySelectorAll('[data-model-target]')
+        const closeModelButton = document.querySelectorAll('[data-close-button]')
+        const overlay = document.getElementById('overlay')
+
+        openModelButton.forEach(button => {
+            button.addEventListener('click', () => {
+                const model = document.querySelector(button.dataset.modelTarget)
+                openModel(model)
+            })
+        })
+
+        overlay.addEventListener('click', () => {
+            const models = document.querySelectorAll('.model')
+            models.forEach(model => {
+                closeModel(model)
+            })
+        })
+
+        closeModelButton.forEach(button => {
+            button.addEventListener('click', () => {
+                const model = button.closest('.model')
+                closeModel(model)
+            })
+        })
+
+        function openModel(model) {
+            if (model == null) return
+            model.classList.add('active')
+            overlay.classList.add('active')
+            testimonialBox.classList.add('active');
         }
+
+        function closeModel(model) {
+            if (model == null) return
+            model.classList.remove('active')
+            overlay.classList.remove('active')
+        }
+
     </script>
 
     <!-- Firebase JS -->
