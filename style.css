@@ -758,6 +758,13 @@ section {
     .quill {
         bottom: 10px;
     }
+
+    /* Review Popup */
+
+    .model{
+        width: 300px;
+    }
+
 }
 
 @media (max-width:480px) {
