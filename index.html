@@ -221,15 +221,20 @@
                 <button data-close-button class="close-button">&times;</button>
             </div>
             <div class="model-body">
-                <form action="">
+                <!-- To store Users Data in FireBase -->
+                <form action="javascript:writeUserReview()" method="post" id="sendReveiw">        
+                    <!-- <span class="imgSpan"> -->
+                        <img src="MyAssets/Testimonials/Review/add image.png" alt="Add Image" class="addImg">
+                    <!-- </span> -->
                     <div class="input">
-                        <input type="text" name="name" id="" placeholder="Your Good Name" required>
+                        <input type="text" name="name" id="name" placeholder="Your Good Name" required>
                     </div>
                     <div class="input">
-                        <input type="text" name="designation" id="" placeholder="Your Designation" required>
+                        <input type="text" name="designation" id="designation" placeholder="Your Designation" required>
                     </div>
                     <div class="input">
-                        <textarea name="message" id="" cols="20" rows="10" placeholder="Drop Your Review" required></textarea>
+                        <textarea name="message" id="" cols="20" rows="10" id="review" placeholder="Drop Your Review"
+                            required></textarea>
                     </div>
                     <div class="input submitInput">
                         <button type="submit" id="submit">Submit</button>
@@ -307,23 +312,23 @@
 
         // To avoid open Debugger tool 
 
-        document.onkeydown = function (e) {
-            if (event.keyCode == 123) {
-                return false;
-            }
-            if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-                return false;
-            }
-            if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
-                return false;
-            }
-            if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-                return false;
-            }
-            if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-                return false;
-            }
-        }
+        // document.onkeydown = function (e) {
+        //     if (event.keyCode == 123) {
+        //         return false;
+        //     }
+        //     if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+        //         return false;
+        //     }
+        //     if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+        //         return false;
+        //     }
+        //     if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+        //         return false;
+        //     }
+        //     if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+        //         return false;
+        //     }
+        // }
 
 
         // Review Popup JS
