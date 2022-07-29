@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-analytics.js";
+// import { getFirestore , doc , getDoc , getDocs , collection } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-analytics.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -23,6 +24,7 @@ const analytics = getAnalytics(app);
 
 import { getDatabase, ref, set, child, update, remove }
   from 'https://www.gstatic.com/firebasejs/9.8.4/firebase-database.js'
+// import { documentId } from "@firebase/firestore"
 
 const sendBtn = document.getElementById('contactForm');
 sendBtn.addEventListener('submit', writeUserData);
@@ -96,7 +98,27 @@ function writeUserReview(e) {
   const designation = getSubmittedValues('designation');
   const review = getSubmittedValues('review');
 
+  // console.log(name)
+  // console.log(designation)
+  // console.log(review)
+  
+  set(ref(db, 'review/' + name + date.getTime().toString().substring(6, 10)), {
+    Username: name,
+    Designation: designation,
+    Review: review,
+  });
 
+  const model = document.getElementById('model');
+  model.innerHTML = `<div class="model-body">
+                       <h2>Thank You For Your Review </h2> 
+                     </div>`
+
+  setTimeout(() => {
+    model.remove();
+    document.getElementById('overlay').remove();
+  }, 3000);
+
+  model.remove();
 }
 
 function getSubmittedValues(id) {
